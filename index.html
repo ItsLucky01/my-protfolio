@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Kumari | Professional Portfolio</title>
+    <meta name="description" content="Portfolio of Lucky Kumari - B.Tech IT Student, Web Developer, and Programmer. Explore projects, skills, certificates, and achievements.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Notification Toast Container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo">
+                <span class="logo-bracket">&lt;</span><span id="navBrandText">LK</span> <span class="logo-slash">/&gt;</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <button id="openProfileSettingsBtn" class="btn btn-secondary-sm" title="Edit Profile & Social Links">
+                    <i class="fa-solid fa-user-pen"></i>
+                    <span>Edit Profile</span>
+                </button>
+                <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#education" class="mobile-nav-link">Education</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#certificates" class="mobile-nav-link">Certificates</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <button id="openProfileSettingsMobileBtn" class="btn btn-primary" style="margin-top: 15px; width: 100%;">
+                <i class="fa-solid fa-user-pen"></i> Edit Profile & Socials
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-glow-1"></div>
+            <div class="hero-glow-2"></div>
+
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Open to Opportunities & Internships</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text" id="heroName">Lucky Kumari</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle" id="heroTitle">
+                        B.Tech Information Technology Student
+                    </h2>
+
+                    <p class="hero-description" id="heroBio">
+                        Passionate IT student interested in Web Development, Software Engineering, and Data Analytics. 
+                        Dedicated to building efficient applications, learning emerging technologies, and solving real-world challenges.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-laptop-code"></i> View Projects
+                        </a>
+                        <a href="#" id="heroResumeBtn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-arrow-down"></i> My Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-envelope"></i> Let's Connect
+                        </a>
+                    </div>
+
+                    <!-- Social Links with Live Updates -->
+                    <div class="social-wrapper">
+                        <span class="social-label">Connect with me:</span>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/" id="socialLinkedIn" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="Visit LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/" id="socialGitHub" target="_blank" rel="noopener noreferrer" class="social-btn github" title="Visit GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:luckykumari@example.com" id="socialEmail" class="social-btn email" title="Send Email">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="profile-card">
+                        <div class="profile-avatar-frame">
+                            <img id="profileImageDisplay" src="images/profile.jpg" alt="Lucky Kumari" class="profile-img">
+                            <button id="quickChangePhotoBtn" class="photo-overlay-btn" title="Change Profile Photo">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>Change Photo</span>
+                            </button>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="floating-badge badge-1">
+                            <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
+                            <span>Web Dev</span>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fa-solid fa-database" style="color: #F59E0B;"></i>
+                            <span>SQL & Data</span>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fa-brands fa-python" style="color: #38BDF8;"></i>
+                            <span>Programming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <span class="section-tag">INTRODUCTION</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Get to know my journey, interests, and career aspirations.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card-main">
+                    <div class="about-header">
+                        <div class="about-photo-frame">
+                            <img id="aboutProfileImageDisplay" src="images/profile.jpg" alt="Lucky Kumari" class="about-profile-img">
+                        </div>
+                        <div class="about-header-text">
+                            <h3 id="aboutCardName">Lucky Kumari</h3>
+                            <p class="about-role" id="aboutCardRole">B.Tech IT Undergrad & Developer</p>
+                            <div class="about-status-pill">
+                                <span class="pulse-dot-sm"></span> Available for Opportunities
+                            </div>
+                        </div>
+                    </div>
+                    <p class="about-text" id="aboutFullText">
+                        Hello! I am Lucky Kumari, currently pursuing my Bachelor of Technology in Information Technology at 
+                        <strong>Bansal Institute of Engineering & Technology, Lucknow</strong>.
+                        <br><br>
+                        I have a strong passion for Full-Stack Web Development, Data Analytics, and Software Engineering. 
+                        I enjoy transforming ideas into responsive, user-friendly digital applications. My technical toolkit includes 
+                        HTML, CSS, JavaScript, Java, Python, SQL, and modern responsive design frameworks.
+                        <br><br>
+                        I am constantly exploring new tools, contributing to projects, and looking for collaborative opportunities 
+                        where I can apply my skills and grow as an engineer.
+                    </p>
+
+                    <div class="personal-info-grid">
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Degree:</span>
+                            <span class="info-value">B.Tech (Information Technology)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-building-columns"></i> College:</span>
+                            <span class="info-value">B.I.E.T, Lucknow</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                            <span class="info-value" id="aboutLocation">Lucknow, Uttar Pradesh, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                            <span class="info-value" id="aboutEmail">luckykumari4018@gmail.com</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-and-highlights">
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <h3 class="stat-number" id="statsProjectCount">3+</h3>
+                            <p class="stat-desc">Projects Built</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                            <h3 class="stat-number" id="statsCertCount">3+</h3>
+                            <p class="stat-desc">Certificates Earned</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="stat-number">8+</h3>
+                            <p class="stat-desc">Tech Skills</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-desc">Dedication</p>
+                        </div>
+                    </div>
+
+                    <div class="pillars-card">
+                        <h4>What I Bring to the Table</h4>
+                        <div class="pillars-list">
+                            <div class="pillar-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <div>
+                                    <strong>Clean & Modern Web Design</strong>
+                                    <p>Responsive, accessible user interfaces built with modern standards.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <div>
+                                    <strong>Problem Solving & Logic</strong>
+                                    <p>Solid grasp of programming fundamentals in Java and Python.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <i class="fa-solid fa-check-circle"></i>
+                                <div>
+                                    <strong>Data Handling & SQL</strong>
+                                    <p>Structured query language, relational databases, and data analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="section-header">
+                <span class="section-tag">ACADEMIC JOURNEY</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">My formal learning background and educational milestones.</p>
+            </div>
+
+            <div class="education-timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge">Currently Pursuing</div>
+                        <h3>Bachelor of Technology (B.Tech)</h3>
+                        <h4 class="dept">Information Technology</h4>
+                        <p class="institution"><i class="fa-solid fa-building-columns"></i> Bansal Institute of Engineering & Technology, Lucknow</p>
+                        <p class="timeline-desc">
+                            Core Coursework: Data Structures & Algorithms, Object-Oriented Programming (Java), Web Technologies, Database Management Systems (DBMS), Operating Systems, and Computer Networks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge secondary">Completed</div>
+                        <h3>Intermediate (Class XII)</h3>
+                        <h4 class="dept">Science & Mathematics Stream</h4>
+                        <p class="institution"><i class="fa-solid fa-building-columns"></i> Senior Secondary School</p>
+                        <p class="timeline-desc">
+                            Focused on Physics, Chemistry, and Mathematics. Built analytical thinking, problem-solving techniques, and foundational science aptitude.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge secondary">Completed</div>
+                        <h3>High School (Class X)</h3>
+                        <h4 class="dept">General Academic Curriculum</h4>
+                        <p class="institution"><i class="fa-solid fa-building-columns"></i> Secondary School Education</p>
+                        <p class="timeline-desc">
+                            Excelled in Mathematics, Science, and Computer Basics with outstanding academic discipline and co-curricular participation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-header">
+                <span class="section-tag">COMPETENCIES</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Technologies, frameworks, and programming languages I work with.</p>
+            </div>
+
+            <div class="skills-categories-grid">
+                <!-- Frontend Card -->
+                <div class="skill-category-box">
+                    <div class="category-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-badges-grid">
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-bootstrap" style="color: #7952B3;"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-mobile-screen" style="color: #06B6D4;"></i>
+                            <span>Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming & Backend Card -->
+                <div class="skill-category-box">
+                    <div class="category-header">
+                        <i class="fa-solid fa-terminal"></i>
+                        <h3>Languages & Programming</h3>
+                    </div>
+                    <div class="skill-badges-grid">
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-java" style="color: #EA2D2E;"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-c" style="color: #659AD2;"></i>
+                            <span>C Programming</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-brain" style="color: #10B981;"></i>
+                            <span>OOP Concepts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Analytics Card -->
+                <div class="skill-category-box">
+                    <div class="category-header">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Database & Analytics</h3>
+                    </div>
+                    <div class="skill-badges-grid">
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-server" style="color: #00758F;"></i>
+                            <span>SQL / MySQL</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-chart-column" style="color: #F2C811;"></i>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-file-excel" style="color: #107C41;"></i>
+                            <span>MS Excel</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-chart-line" style="color: #8B5CF6;"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms Card -->
+                <div class="skill-category-box">
+                    <div class="category-header">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Tools & Workflow</h3>
+                    </div>
+                    <div class="skill-badges-grid">
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-git-alt" style="color: #F05032;"></i>
+                            <span>Git Version Control</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-brands fa-github" style="color: #FFFFFF;"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-code" style="color: #007ACC;"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-badge">
+                            <i class="fa-solid fa-lightbulb" style="color: #F59E0B;"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (with Dynamic Upload / Add) -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <span class="section-tag">PORTFOLIO WORK</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Real-world projects and applications I have developed.</p>
+            </div>
+
+            <!-- Controls bar: Filters & Add Project Button -->
+            <div class="section-toolbar">
+                <div class="filter-group" id="projectFilters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="software">Software / Apps</button>
+                    <button class="filter-btn" data-filter="data">Data Analytics</button>
+                </div>
+
+                <button id="openAddProjectModalBtn" class="btn btn-primary" title="Add a new project to your portfolio">
+                    <i class="fa-solid fa-plus-circle"></i>
+                    <span>Upload / Add Project</span>
+                </button>
+            </div>
+
+            <!-- Projects Grid Container (Dynamically rendered by JS) -->
+            <div id="projectsContainer" class="projects-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+
+        <!-- Certificates Section (with Dynamic Upload & Lightbox) -->
+        <section id="certificates" class="certificates-section">
+            <div class="section-header">
+                <span class="section-tag">ACHIEVEMENTS</span>
+                <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Certifications and milestones validating my continuous learning.</p>
+            </div>
+
+            <!-- Controls bar: Add Certificate Button -->
+            <div class="section-toolbar right-aligned">
+                <p class="toolbar-hint"><i class="fa-solid fa-circle-info"></i> Click any certificate card to preview full size</p>
+                <button id="openAddCertificateModalBtn" class="btn btn-primary" title="Add a new certificate">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Upload / Add Certificate</span>
+                </button>
+            </div>
+
+            <!-- Certificates Grid Container (Dynamically rendered by JS) -->
+            <div id="certificatesContainer" class="certificates-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Have a project idea, internship opportunity, or just want to chat? Reach out!</p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Contact Information Cards -->
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to connect via LinkedIn, inspect my code on GitHub, or send a direct email.</p>
+
+                    <div class="contact-cards-list">
+                        <a href="mailto:luckykumari@example.com" id="contactEmailCard" class="contact-item-card">
+                            <div class="contact-icon email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email Me</span>
+                                <span class="contact-value" id="contactEmailText">luckykumari@example.com</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square open-icon"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/" id="contactLinkedInCard" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                            <div class="contact-icon linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn Profile</span>
+                                <span class="contact-value" id="contactLinkedInText">Connect on LinkedIn</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square open-icon"></i>
+                        </a>
+
+                        <a href="https://github.com/" id="contactGitHubCard" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+                            <div class="contact-icon github">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub Repositories</span>
+                                <span class="contact-value" id="contactGitHubText">Explore My Code</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square open-icon"></i>
+                        </a>
+
+                        <div class="contact-item-card static">
+                            <div class="contact-icon location">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value" id="contactLocationText">Lucknow, Uttar Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Message Form -->
+                <div class="contact-form-panel">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactSenderName">Your Name *</label>
+                                <input type="text" id="contactSenderName" required placeholder="e.g. John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSenderEmail">Your Email *</label>
+                                <input type="email" id="contactSenderEmail" required placeholder="e.g. john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <input type="text" id="contactSubject" required placeholder="Project Inquiry / Opportunity">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" rows="5" required placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo-bracket">&lt;</span><span id="footerBrandText">Lucky Kumari</span> <span class="logo-slash">/&gt;</span>
+                    </a>
+                    <p>B.Tech IT Student & Passionate Developer building meaningful web solutions.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-socials">
+                    <h4>Social Profiles</h4>
+                    <div class="social-icons-row">
+                        <a href="https://www.linkedin.com/" id="footerLinkedIn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/" id="footerGitHub" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:luckykumari@example.com" id="footerEmail" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="currentYear">2026</span> <strong id="footerCopyrightName">Lucky Kumari</strong>. All Rights Reserved.</p>
+                <a href="#home" class="back-to-top" title="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================== -->
+    <!-- MODALS SECTION                                                -->
+    <!-- ============================================================== -->
+
+    <!-- 1. EDIT PROFILE & SOCIAL LINKS MODAL -->
+    <div id="profileModal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <h3>Edit Profile & Social Links</h3>
+                </div>
+                <button class="modal-close-btn" data-close-modal="profileModal">&times;</button>
+            </div>
+
+            <form id="profileForm" class="modal-body">
+                <div class="modal-avatar-section">
+                    <div class="avatar-preview-box">
+                        <img id="modalAvatarPreview" src="images/profile.jpg" alt="Preview">
+                    </div>
+                    <div class="avatar-upload-inputs">
+                        <label class="btn btn-outline btn-sm upload-btn">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Profile Photo
+                            <input type="file" id="profileImageFileInput" accept="image/*" style="display: none;">
+                        </label>
+                        <p class="input-hint">Supported formats: JPG, PNG, WebP, SVG (Max 3MB)</p>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputProfileName">Full Name *</label>
+                        <input type="text" id="inputProfileName" required placeholder="Lucky Kumari">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProfileTitle">Professional Title / Subtitle *</label>
+                        <input type="text" id="inputProfileTitle" required placeholder="B.Tech IT Student & Web Developer">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputProfileBio">Hero / Bio Description</label>
+                    <textarea id="inputProfileBio" rows="3" placeholder="Brief summary about yourself..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputProfileLinkedIn"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i> LinkedIn Profile URL</label>
+                        <input type="url" id="inputProfileLinkedIn" placeholder="https://www.linkedin.com/in/your-username">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProfileGitHub"><i class="fa-brands fa-github"></i> GitHub Profile URL</label>
+                        <input type="url" id="inputProfileGitHub" placeholder="https://github.com/your-username">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputProfileEmail"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                        <input type="email" id="inputProfileEmail" placeholder="yourname@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProfileLocation"><i class="fa-solid fa-location-dot"></i> Location</label>
+                        <input type="text" id="inputProfileLocation" placeholder="Lucknow, Uttar Pradesh, India">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputProfileResume"><i class="fa-solid fa-file-pdf"></i> Resume Link / File URL</label>
+                    <input type="text" id="inputProfileResume" placeholder="resume.pdf or Google Drive / LinkedIn link">
+                </div>
+
+                <!-- Backup & Reset utility -->
+                <div class="settings-tools-box">
+                    <span class="tools-title">Portfolio Data Management:</span>
+                    <div class="tools-actions">
+                        <button type="button" id="exportDataBtn" class="btn btn-secondary-sm">
+                            <i class="fa-solid fa-download"></i> Export Data (JSON)
+                        </button>
+                        <label class="btn btn-secondary-sm upload-label">
+                            <i class="fa-solid fa-upload"></i> Import Data
+                            <input type="file" id="importDataFileInput" accept=".json" style="display: none;">
+                        </label>
+                        <button type="button" id="resetDataBtn" class="btn btn-danger-sm">
+                            <i class="fa-solid fa-rotate-left"></i> Reset to Default
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal="profileModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i> Save Profile
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. ADD / EDIT PROJECT MODAL -->
+    <div id="projectModal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <h3 id="projectModalHeading">Add New Project</h3>
+                </div>
+                <button class="modal-close-btn" data-close-modal="projectModal">&times;</button>
+            </div>
+
+            <form id="projectForm" class="modal-body">
+                <input type="hidden" id="projectEditId" value="">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputProjectTitle">Project Title *</label>
+                        <input type="text" id="inputProjectTitle" required placeholder="e.g. Student Management System">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProjectCategory">Category *</label>
+                        <select id="inputProjectCategory" required>
+                            <option value="web">Web Development</option>
+                            <option value="software">Software / Desktop App</option>
+                            <option value="data">Data Analytics / ML</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputProjectDescription">Description *</label>
+                    <textarea id="inputProjectDescription" rows="3" required placeholder="Explain what the project does, key features, and your contribution..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputProjectTech">Technologies Used * (comma separated)</label>
+                    <input type="text" id="inputProjectTech" required placeholder="e.g. HTML5, CSS3, JavaScript, MySQL">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputProjectDemoUrl"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo Link (Optional)</label>
+                        <input type="url" id="inputProjectDemoUrl" placeholder="https://your-demo-url.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputProjectGithubUrl"><i class="fa-brands fa-github"></i> GitHub Repository Link</label>
+                        <input type="url" id="inputProjectGithubUrl" placeholder="https://github.com/your-username/repo-name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Project Cover Image (Optional)</label>
+                    <div class="file-upload-container">
+                        <div class="upload-preview-wrapper">
+                            <img id="projectImagePreview" src="images/project-placeholder.svg" alt="Project Cover Preview">
+                        </div>
+                        <div class="upload-controls">
+                            <label class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-image"></i> Choose Image File
+                                <input type="file" id="projectImageFileInput" accept="image/*" style="display: none;">
+                            </label>
+                            <span class="or-separator">or enter image URL:</span>
+                            <input type="url" id="inputProjectImageUrl" placeholder="https://images.unsplash.com/...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal="projectModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Save Project
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3. ADD / EDIT CERTIFICATE MODAL -->
+    <div id="certificateModal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i class="fa-solid fa-award"></i>
+                    <h3 id="certModalHeading">Upload / Add Certificate</h3>
+                </div>
+                <button class="modal-close-btn" data-close-modal="certificateModal">&times;</button>
+            </div>
+
+            <form id="certificateForm" class="modal-body">
+                <input type="hidden" id="certEditId" value="">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputCertTitle">Certificate Title *</label>
+                        <input type="text" id="inputCertTitle" required placeholder="e.g. Web Development Bootcamp">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCertIssuer">Issuing Organization / Platform *</label>
+                        <input type="text" id="inputCertIssuer" required placeholder="e.g. Coursera / HackerRank / Great Learning">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputCertDate">Issue Date / Year</label>
+                        <input type="text" id="inputCertDate" placeholder="e.g. 2026 or March 2026">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCertLink"><i class="fa-solid fa-link"></i> Verification URL / Credential Link</label>
+                        <input type="url" id="inputCertLink" placeholder="https://coursera.org/verify/...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Certificate Image / Document</label>
+                    <div class="file-upload-container">
+                        <div class="upload-preview-wrapper cert">
+                            <img id="certImagePreview" src="images/cert-placeholder.svg" alt="Certificate Preview">
+                        </div>
+                        <div class="upload-controls">
+                            <label class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-file-image"></i> Upload Certificate Image
+                                <input type="file" id="certImageFileInput" accept="image/*" style="display: none;">
+                            </label>
+                            <span class="or-separator">or enter image URL:</span>
+                            <input type="url" id="inputCertImageUrl" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-close-modal="certificateModal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Save Certificate
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. CERTIFICATE LIGHTBOX MODAL (FOR VIEWING) -->
+    <div id="lightboxModal" class="modal-backdrop lightbox-backdrop" aria-hidden="true">
+        <div class="lightbox-card">
+            <div class="lightbox-header">
+                <div>
+                    <h3 id="lightboxTitle">Certificate View</h3>
+                    <p id="lightboxIssuer" class="lightbox-subtitle">Issued by Platform</p>
+                </div>
+                <button class="modal-close-btn" data-close-modal="lightboxModal">&times;</button>
+            </div>
+            <div class="lightbox-body">
+                <img id="lightboxImage" src="" alt="Full Certificate">
+            </div>
+            <div class="lightbox-footer">
+                <a id="lightboxVerifyBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credential
+                </a>
+                <button type="button" class="btn btn-secondary btn-sm" data-close-modal="lightboxModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
